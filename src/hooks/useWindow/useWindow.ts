@@ -13,7 +13,8 @@ const actions: Behavior[] = [
 type UseWindow = (
   name: string,
   shouldDisplayLog?: boolean,
-  listenToWindowStateChanges?: boolean
+  listenToWindowStateChanges?: boolean,
+  alwaysProd?: boolean
 ) => [
   (overwolf.windows.WindowInfo & WindowBehavior) | undefined,
   overwolf.windows.WindowStateChangedEvent | undefined,

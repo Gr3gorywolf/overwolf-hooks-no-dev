@@ -1,6 +1,6 @@
 {
-  "name": "overwolf-hooks",
-  "version": "4.1.5",
+  "name": "overwolf-hooks-no-dev",
+  "version": "4.1.7",
   "description": "custom hooks to help use overwolf api with the new react hooks technology.",
   "author": "AlbericoD",
   "license": "MIT",
@@ -58,5 +58,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "overwolf-hooks-no-dev": "^4.1.5"
   }
 }
