@@ -23,7 +23,8 @@ type UseWindow = (
 export const useWindow: UseWindow = (
   name,
   shouldDisplayLog = false,
-  listenToWindowStateChanges = false
+  listenToWindowStateChanges = false,
+  alwaysProd = false
 ) => {
   const [owWindow, setOwWindow] = useState<
     overwolf.windows.WindowInfo & WindowBehavior
@@ -33,7 +34,7 @@ export const useWindow: UseWindow = (
 
   const bindWindowBehavior = useCallback(async (): Promise<void> => {
     try {
-      if (process.env.NODE_ENV === "development") {
+      if (process.env.NODE_ENV === "development" && !alwaysProd) {
         log(
           `[DEV MODE]`,
           "@overwolf-hooks/hooks/useWindow/wrappers.ts",
